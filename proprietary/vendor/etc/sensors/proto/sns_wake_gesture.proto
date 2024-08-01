@@ -1,0 +1,28 @@
+// @file sns_wake_gesture.proto
+//
+// Defines the API for wake_gesture Sensor.
+//
+
+syntax = "proto2";
+import "nanopb.proto";
+import "sns_std_sensor.proto";
+
+// A wake gesture sensor reports once if "tilt" is detected.
+//
+// ## Wake Gesture sensor attributes:
+// SNS_STD_SENSOR_ATTRID_TYPE is "wake_gesture"
+// SNS_STD_SENSOR_ATTRID_STREAM_TYPE: SNS_STD_SENSOR_STREAM_TYPE_SINGLE_OUTPUT
+//
+// ## Request Message: SNS_STD_SENSOR_MSGID_SNS_STD_ON_CHANGE_CONFIG
+// No configuration is available for this sensor.
+//
+// ## Event Message: SNS_WAKE_GESTURE_MSGID_SNS_WAKE_GESTURE_EVENT
+// Reported upon new detection of wake gesture.
+
+// Message IDs for WAKE GESTURE Detect Sensor
+enum sns_wake_gesture_msgid {
+  option (nanopb_enumopt).long_names = false;
+
+  // Empty Message
+  SNS_WAKE_GESTURE_MSGID_SNS_WAKE_GESTURE_EVENT = 779;
+}

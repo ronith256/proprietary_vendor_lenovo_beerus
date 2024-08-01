@@ -1,0 +1,3 @@
+on boot
+    # Touch Edge Grid Zone
+    chown system system /proc/edge_grid_zone

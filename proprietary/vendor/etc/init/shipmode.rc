@@ -1,0 +1,3 @@
+# add for shipmode
+on property:persist.log.tag.zui.shipmode.on=1
+     write /sys/module/qpnp_power_on/parameters/ship_mode_en 1
